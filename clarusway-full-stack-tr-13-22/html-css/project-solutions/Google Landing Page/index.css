@@ -1,0 +1,53 @@
+/** Resetting */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+    text-decoration: none;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13px;
+}
+
+/* ----HEADER------- */
+header{
+padding:20px;
+
+}
+ul li{
+    display: inline-block;
+}
+ul li a{
+    color:black;
+    opacity: 0.8;
+    padding:0.5rem;
+}
+
+ul li a:hover{
+    text-decoration: underline;
+}
+.header__left{
+    float:left;
+}
+.header__right{
+    float:right;
+}
+
+.header__right--appicon{
+    vertical-align: middle;
+    opacity:0.5;
+}
+.header__right--appicon:hover{
+    opacity:1;
+}
+.header__right--button{
+    background-color:#4285f4;
+    color:white;
+    border:none;
+    border-radius: 4px;
+    width:70px; 
+    height: 30px;
+    font-weight: 600;
+    cursor: pointer;
+}
