@@ -1,0 +1,30 @@
+Command 'rmf' not found, but can be installed with:
+sudo apt install mailutils-mh  # version 1:3.14-1, or
+sudo apt install mmh           # version 0.4-4
+sudo apt install nmh           # version 1.7.1-11
+muhammeddemirci@SEYYAH:~/Desktop/LinuxDers/klasör1/klasör2$ rm file2.txt
+muhammeddemirci@SEYYAH:~/Desktop/LinuxDers/klasör1/klasör2$ mkdir klasörx
+muhammeddemirci@SEYYAH:~/Desktop/LinuxDers/klasör1/klasör2$ rm -rf klasörx
+muhammeddemirci@SEYYAH:~/Desktop/LinuxDers/klasör1/klasör2$ cd..
+cd..: command not found
+muhammeddemirci@SEYYAH:~/Desktop/LinuxDers/klasör1/klasör2$ cd ..
+muhammeddemirci@SEYYAH:~/Desktop/LinuxDers/klasör1$ yeni.png
+yeni.png: command not found
+muhammeddemirci@SEYYAH:~/Desktop/LinuxDers/klasör1$ cd ..
+muhammeddemirci@SEYYAH:~/Desktop/LinuxDers$ pwd
+/home/muhammeddemirci/Desktop/LinuxDers
+muhammeddemirci@SEYYAH:~/Desktop/LinuxDers$ cd klasör1
+muhammeddemirci@SEYYAH:~/Desktop/LinuxDers/klasör1$ cd ..
+muhammeddemirci@SEYYAH:~/Desktop/LinuxDers$ mkdir gönderen alan
+muhammeddemirci@SEYYAH:~/Desktop/LinuxDers$ cd gönderen
+muhammeddemirci@SEYYAH:~/Desktop/LinuxDers/gönderen$ touch mektup.txt
+muhammeddemirci@SEYYAH:~/Desktop/LinuxDers/gönderen$ cd ..
+muhammeddemirci@SEYYAH:~/Desktop/LinuxDers$ cp gönderen/mektup.txt alan/gelen_mektup.txt
+muhammeddemirci@SEYYAH:~/Desktop/LinuxDers$ cd gönderen
+muhammeddemirci@SEYYAH:~/Desktop/LinuxDers/gönderen$ touch kısa_mektup.txt
+muhammeddemirci@SEYYAH:~/Desktop/LinuxDers/gönderen$ cd ..
+muhammeddemirci@SEYYAH:~/Desktop/LinuxDers$ mv gönderen/kısa_mektup.txt alan/gelen kısa mektup.txt
+mv: target 'mektup.txt' is not a directory
+muhammeddemirci@SEYYAH:~/Desktop/LinuxDers$ mv gönderen/kısa_mektup.txt alan/gelen_kısa_mektup.txt
+muhammeddemirci@SEYYAH:~/Desktop/LinuxDers$ mv alan/gelen_kısa_mektup.txt alan/ask_mektubu.txt
+muhammeddemirci@SEYYAH:~/Desktop/LinuxDers$

@@ -1,0 +1,40 @@
+Bu, en sık kullanılan Linux komutlarının bir listesidir.
+
+~ (tilde) sembolü , ana dizininizi ifade eder.
+
+pwd ( çalışma dizinini yazdır anlamına gelir) komutu, hangi dizinde bulunduğunuzu bilmenizi sağlar.
+
+ls komutu size geçerli dizininizdeki klasörlerin ve dosyaların listesini gösterecektir .
+
+cp komutu bir dosyanın kopyasını oluşturur .
+
+cd komutu dizinleri değiştirmenize izin verecektir .
+
+rm komutu dizininizdeki bir dosyayı kaldırır veya siler .
+
+rmdir komutu boş bir dizini siler .
+
+mkdir komutu, dizinler oluşturmanıza izin verecektir .
+
+mv komutu , bir dosyayı farklı bir konuma taşıyacak veya bir dosyayı yeniden adlandıracaktır.
+
+cd - Çalıştığınız son dizine gidin.
+
+cd ~ veya sadece cd Geçerli kullanıcının ana dizinine gidin.
+
+cd .. Geçerli dizinin üst dizinine gidin (cd ve .. arasındaki boşluğa dikkat edin)
+
+Çift Tırnak : Çift tırnak " tırnak içinde yer alan çoğu karakterin değişmez değerini korur, istisnalar şunları içerir $ (for variables), ' (for single quoting), \ (for escaping a character) 
+
+Tek Tırnaklar : Tek tırnak ('alıntı'), tek tırnak işaretleri arasındaki her şeyi korur.
+
+Ters eğik çizgi : Karakterlerin özel anlamını değiştirmek veya metin içinde tırnak işaretleri gibi özel karakterlerden kaçmak için ters eğik çizgiyi kullanın.
+
+Mod değiştirme chmod anlamına gelen komutu kullanabiliriz .
+
+whoami Komutu, Yerel sistemde o anda oturum açmış olan kullanıcı için kullanıcı, grup ve ayrıcalık bilgilerini görüntüler.
+
+ping host-name/IP; bir IP ağı üzerinden bir kaynak ve bir hedef bilgisayar/cihaz arasındaki bağlantı durumunu kontrol etmek için kullanılan bir ağ yönetim yardımcı programıdır. Ayrıca, ağdan bir yanıt göndermek ve almak için geçen süreyi değerlendirmenize de yardımcı olur.
+
+ssh"Güvenli Kabuk" anlamına gelir. Uzak bir sunucuya/sisteme güvenli bir şekilde bağlanmak için kullanılan bir protokoldür.
+

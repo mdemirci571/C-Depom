@@ -1,0 +1,15 @@
+pwd = hangi konumda bulunduğunuzu gösterir
+cd klasör adı = klasör'e sizi götürür
+cd = sizi home'ye (başlangıca) götürür)
+cd .. = sizi bulunduğunuz konumun 1 öncesine gönderir, (örneğin 1/2/3 konumdayken cd .. yazarsanız 1/2 konumunda olacaksınız.
+mkdir klasör adı = klasör oluşturur
+touch dosya adı = dosya oluşturur
+rmdir klasör adı = klasör siler (sadece boş klasörler)
+rm dosya adı = dosya siler
+rm -r klasör adı = klasörün altında dosya olsa bile siler
+rm -rf klasöradı = klasör açık olsa bile siler
+ls = dosyaları listeler
+ls -l = dosyaları daha ayrıntılı listeler
+ctrl + l = yaptığınız kod geçmişini siler (dosyalarını silmez, sadece görsel olarak)
+cp klasör veya dosya adı / klasör veya dosya adı = klasörünüzü veya dosyanızı kopyalar
+mv klasör veya dosya adı / klasör veya dosya adı = klasörünüzü veya dosyanızı taşır
