@@ -1,0 +1,2 @@
+git log: dosyanın commit geçmişini görmek için.
+git branch -M master veya main: main ve master branchlerini değiştirme.
