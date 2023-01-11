@@ -8,3 +8,5 @@ List of coding challenges within JavaScript workshop as follows;
 - [JS - CC02 - Reverse Words](./CC-02/README.md)
 
 - [JS - CC03 - Merge Arrays](./CC-03/README.md)
+
+- [JS - CC04 - Email Validator](./CC-04/README.md)

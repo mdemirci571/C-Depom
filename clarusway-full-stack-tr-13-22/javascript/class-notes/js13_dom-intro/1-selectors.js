@@ -42,10 +42,34 @@ console.log(list.item(3))
 // list[3].innerText = "REACT / VUE / Swelte"
 list[3].innerHTML = "REACT / VUE / Swelte / Angular"
 
+console.log(list[2].textContent) //? Javascript - JS is an object-based language
+//? textContent HTML elementinin tum yazi dugumlerini CSS veya HTML 'e bakmasizin verir.
+
+console.log(list[2].innerText) //? innerText CSS parse islemi yaparak yazi elementi dondurur.
+
+console.log(list[2].innerHTML) //? innerHTML tamamen HTML parse islemi yaparak elementlere ulasmamizi saglar
+
+list[4].innerHTML += `<li><a class="link" href="https://www.clarusway.com">CW</a></li>`
+
+//? HTML kodlarini calistirir. (Guvenlik acisindan problemli)
+
 //*===========================================
 //*          GETELEMENTSBYCLASSNAME()
 //*===========================================
 
+const itemList = document.getElementsByClassName("list")
+console.log(itemList) //?HTMLCollection [section.item-list]
+console.log(itemList)
+
+//? Array.from() (HTMLCollection -> Array)
+const itemListArr = Array.from(itemList)
+console.log(...itemList)
+itemListArr.forEach((x) => console.log(x))
+
+//? SPREAD (HTMLCollection -> Array)
+const itemListSpread = [...itemList]
+console.log(itemListSpread)
+itemListSpread.map((x) => console.log((x.style.color = "red")))
 //* ========================================
 //*              QUERYSELECTOR()
 //* ========================================
