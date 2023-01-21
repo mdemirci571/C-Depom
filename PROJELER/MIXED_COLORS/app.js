@@ -27,3 +27,18 @@ hex.addEventListener("click", () => {
     });
   }
 });
+rgbbtn.addEventListener("click", () => {
+    rgb.textContent = "Rgb(0, 0, 255)";
+    pressed = false;
+    if (!pressed) {
+      button.addEventListener("click", () => {
+        const bodyColor = `Rgb(${numberGeneretor()},${numberGeneretor()},${numberGeneretor()})`;
+        const btnColor = `Rgb(${numberGeneretor()},${numberGeneretor()},${numberGeneretor()})`;
+        body.style.backgroundColor = bodyColor;
+        rgb.textContent = bodyColor;
+        rgb.style.color = bodyColor;
+        backgroundColor = btnColor;
+      });
+    }
+  });
+  
