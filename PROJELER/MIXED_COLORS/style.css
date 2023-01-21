@@ -25,4 +25,35 @@
     color: white;
     font-weight: 500;
     /* white-space: pre; */
+  }.btn {
+    padding: 0.8rem 1rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 1rem;
+    border: none;
+    font-size: 1.8rem;
+    background: linear-gradient(to right, rgb(12, 12, 12), 50%, white);
+    cursor: pointer;
+  }
+  
+  #rgb {
+    white-space: pre;
+  }
+  
+  @media (max-width: 1300px) {
+    .background {
+      font-size: 2rem;
+    }
+    .btn {
+      font-size: 1.5rem;
+    }
+  }
+  @media (max-width: 1200px) {
+    .background {
+      font-size: 1.8rem;
+    }
+    .btn {
+      font-size: 1.2rem;
+    }
   }
