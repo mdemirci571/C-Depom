@@ -56,4 +56,21 @@
     .btn {
       font-size: 1.2rem;
     }
+  }.menu {
+    position: fixed;
+    top: 1rem;
   }
+  
+  .hex,
+  .rgbbtn {
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #272727;
+    color: white;
+    font-weight: 400;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
