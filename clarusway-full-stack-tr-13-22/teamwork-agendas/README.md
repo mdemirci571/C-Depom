@@ -16,3 +16,7 @@ List of teamwork agendas for Full Stack  learning path as follows;
 - [Tw-07](./TW-07.pdf)
 
 - [Tw-08](./TW-08.pdf)
+
+- [Tw-09](./TW-09.pdf)
+
+- [Tw-10](./TW-10.pdf)
