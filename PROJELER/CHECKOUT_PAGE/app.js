@@ -14,7 +14,9 @@ let totalProducts = JSON.parse(localStorage.getItem("totalProducts")) || [];
 //   resultProduct.forEach((to)=>{
 //     createNewRes(to)
 //   })
-// }container.addEventListener("click", (e) => {
+// }
+
+container.addEventListener("click", (e) => {
   e.preventDefault();
   if (e.target.classList.contains("plus")) {
     e.target.previousElementSibling.innerText++;
@@ -64,16 +66,17 @@ let totalAll = () => {
       2
     );
   }
-};document.querySelector(".clear").addEventListener("click", () => {
-    if (confirm("Are you Sure?")) {
-      localStorage.clear();
-      document.querySelectorAll(".stotal").forEach((a) => {
-        a.innerText = "";
-      });
-  
-      document.querySelectorAll("#quantity").forEach((a) => {
-        a.innerText = "";
-      });
-    }
-  });
-  
+};
+
+document.querySelector(".clear").addEventListener("click", () => {
+  if (confirm("Are you Sure?")) {
+    localStorage.clear();
+    document.querySelectorAll(".stotal").forEach((a) => {
+      a.innerText = "";
+    });
+
+    document.querySelectorAll("#quantity").forEach((a) => {
+      a.innerText = "";
+    });
+  }
+});
