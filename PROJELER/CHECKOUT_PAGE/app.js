@@ -64,4 +64,16 @@ let totalAll = () => {
       2
     );
   }
-};
+};document.querySelector(".clear").addEventListener("click", () => {
+    if (confirm("Are you Sure?")) {
+      localStorage.clear();
+      document.querySelectorAll(".stotal").forEach((a) => {
+        a.innerText = "";
+      });
+  
+      document.querySelectorAll("#quantity").forEach((a) => {
+        a.innerText = "";
+      });
+    }
+  });
+  
