@@ -102,4 +102,75 @@
       padding: 20px;
       border-radius: 20px;
     
-    }
+    }.dark{
+        background-color:rgba(10, 57, 45);
+        
+      }
+      .light{
+      border: 1px solid rgba(10, 57, 45) ;
+      }
+      
+      .avatar {
+        width: 50px;
+      }
+      
+      
+      
+      label {
+        color: white;
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      textarea {
+        width: 100%;
+        resize: none;
+      }
+      
+      input {
+        width: 100%;
+      }
+      
+      button {
+        background-color: orange;
+        border-radius: 1rem;
+        display: block;
+        margin-top: 1rem;
+        padding: 0.5rem;
+      }
+       button:hover{
+        cursor: pointer;
+        background-color: brown;
+        border: 6px none brown;
+        margin-bottom: 0.22rem;
+      
+       }
+       .comment-cards {
+        background-color: coral;
+        position: relative;
+        margin: 1rem 0;
+      }
+      
+      .image1 {
+        width: 20%;
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+      }
+      
+      .image2 {
+        width: 20%;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        
+        
+      }
+      
+      .image3 {
+        width: 400px;;
+      
+       margin-left: 28rem;
+       
+      }
