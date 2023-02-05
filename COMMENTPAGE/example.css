@@ -49,4 +49,57 @@
     background-color: brown;
     color: rgb(194, 185, 185);
     
-  }
+  }.sign:hover{
+    cursor: pointer;
+    }
+    
+    a {
+      text-decoration: none;
+    }
+    .comments-container{
+      background-color: black;
+      color:white;
+      padding:1rem;
+    }
+    
+    
+    .comment-left{
+      width: 60%;
+      
+    }
+    .comment-header{
+      position: relative;
+      left:1rem;
+    }
+    
+    .comments {
+     
+      margin:1rem;
+      border-radius: 20px;
+      padding:1rem;
+      width: 80%;
+      height:6rem;
+      position: relative;
+     overflow: auto;
+    
+    }
+    
+    .comment{
+    
+    position: absolute;
+    top: 5px;
+    left: 5rem;
+    
+    
+    }
+    
+    .comment-right{
+      right: 20px;
+      width: 30%;
+      position: absolute;
+      top: 140px;
+      background-color:  rgba(10, 57, 45);
+      padding: 20px;
+      border-radius: 20px;
+    
+    }
