@@ -40,4 +40,20 @@ window.addEventListener("load", () => {
   
       list_el.appendChild(task_el);
   
-      input.value = "";
+      input.value = "";task_edit_el.addEventListener("click", (e) => {
+        if (task_edit_el.innerText.toLowerCase() == "edit") {
+          task_edit_el.innerText = "Save";
+          task_input_el.removeAttribute("readonly");
+          task_input_el.focus();
+        } else {
+          task_edit_el.innerText = "Edit";
+          task_input_el.setAttribute("readonly", "readonly");
+        }
+      });
+  
+      task_delete_el.addEventListener("click", (e) => {
+        list_el.removeChild(task_el);
+      });
+    });
+  });
+  
