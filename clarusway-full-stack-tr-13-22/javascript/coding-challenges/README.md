@@ -15,4 +15,6 @@ List of coding challenges within JavaScript workshop as follows;
 
 - [JS - CC06 - Students Registration](./CC-06/README.md)
 
-- [JS - CC07 : Camelizes the Sentences](./CC-07/README.md)
+- [JS - CC07 - Camelizes the Sentences](./CC-07/README.md)
+
+- [JS - CC08 - Random Password Generator](./CC-08/README.md)
