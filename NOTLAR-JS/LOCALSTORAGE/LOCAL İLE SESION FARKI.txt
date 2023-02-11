@@ -1,0 +1,15 @@
+// UNUTMAYALIM LÜTFEN...
+
+//localStorage, sessionStorage'a benzer, ancak localStorage verilerinin sona erme süresi olmasa da, sessionStorage verileri sayfa oturumu sona erdiğinde, yani sayfa kapatıldığında silinir.
+
+ // local storage e veri gönderir => setItem()
+ localStorage.setItem('myCat', 'Tom');
+
+//local storage deki veriyi okumak için => getItem()
+ localStorage.getItem('myCat');
+
+ // local storage deki veriyi siler => removeItem()
+ localStorage.removeItem('myCat');
+
+ //local storage deki tüm verileri siler => clear()
+ localStorage.clear();
