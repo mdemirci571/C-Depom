@@ -1,6 +1,9 @@
-const Msg = (props) => {
-  console.log(props)
-  return <div>Hi {props.name}</div>
+const Msg = ({ name }) => {
+  return (
+    <div>
+      <h5>Hi, My Name is {name}</h5>
+    </div>
+  )
 }
 
 export default Msg
