@@ -7,7 +7,15 @@
 //* Stillendirme icin property-value(object) yapisi kullanilir.
 //* property isimlerinde camelCase kullanimalidir.
 //* class isimleri icin className kullanilir.
-//* Material UI, Styled Component, Sass, Bootstrap v.b harici kutuphaneler kullanilabilir.
+//* Material UI, Styled Component, Sass, Bootstrap, Tailwind, Emotion, Ant Design v.b harici kutuphaneler kullanilabilir.
+
+// ? Dahili bir resim eklemek icin import yapmak gereklidir.
+// ? ancak public klasöründeki resimler import suz bir şekilde
+//? erişilebilir.
+import magnolia from "./img/magnolia.jpg"
+
+//?Harici stillendirme dosyasi
+import "./Content.css"
 
 const Content = () => {
   //? Local Style Object
@@ -15,6 +23,12 @@ const Content = () => {
     fontFamily: "Tahoma",
     fontSize: "1.3rem",
     lineHeight: "1.5",
+  }
+
+  const imgStyle = {
+    display: "block",
+    margin: "1rem auto",
+    width: "400px",
   }
 
   return (
@@ -29,11 +43,26 @@ const Content = () => {
       </p>
 
       <img
+        style={imgStyle}
         src="https://cdn.pixabay.com/photo/2014/12/04/14/46/magnolia-trees-556718__340.jpg"
         alt="spring-img1"
       />
 
-      <img src="" alt="" />
+      <img style={imgStyle} src={magnolia} alt="magnolia-img" />
+
+      {/* <img src="./img/magnolia.jpg" alt="magnolia-img" /> */}
+
+      <p className="par">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+        reiciendis ipsa est, doloremque eum vitae dolor assumenda repellat et
+        eaque consequatur voluptatibus iusto perferendis provident ex! Labore et
+        eaque earum.
+      </p>
+
+      <p className="par">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci culpa,
+        magni quidem ex sunt autem repudiandae pariatur aliquid atque ratione!
+      </p>
     </div>
   )
 }
