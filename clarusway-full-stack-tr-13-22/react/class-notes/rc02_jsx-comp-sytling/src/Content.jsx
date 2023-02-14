@@ -10,7 +10,14 @@
 //* Material UI, Styled Component, Sass, Bootstrap v.b harici kutuphaneler kullanilabilir.
 
 const Content = () => {
-  return <div>Content</div>
+  return (
+    <div>
+      <h2>React JS</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, aperiam.
+      </p>
+    </div>
+  )
 }
 
 export default Content
