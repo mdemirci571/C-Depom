@@ -1,9 +1,13 @@
 import Card from "./components/card/Card"
+import data from "./utils/data"
 
 function App() {
+  console.log(data)
   return (
     <>
-      <Card />
+      {data.map((item) => (
+        <Card />
+      ))}
     </>
   )
 }

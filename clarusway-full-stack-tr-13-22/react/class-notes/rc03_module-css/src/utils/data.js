@@ -17,5 +17,11 @@ const data = [
     img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png",
     btnName: "More",
   },
-];
-export default data;
+  {
+    id: 4,
+    language: "Java",
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png",
+    btnName: "Go",
+  },
+]
+export default data
