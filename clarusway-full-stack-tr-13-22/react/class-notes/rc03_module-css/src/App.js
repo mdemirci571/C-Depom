@@ -5,8 +5,8 @@ function App() {
   console.log(data)
   return (
     <>
-      {data.map((item) => (
-        <Card />
+      {data.map(({ id, language, img, btnName }) => (
+        <Card key={id} lang={language} img={img} btn={btnName} />
       ))}
     </>
   )

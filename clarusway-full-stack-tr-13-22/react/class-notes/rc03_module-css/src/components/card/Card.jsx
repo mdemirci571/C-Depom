@@ -1,11 +1,12 @@
 import Buton from "../buton/Buton"
 import "./Card.css"
 
-const Card = () => {
+const Card = ({ lang, img, btn }) => {
   return (
     <div>
-      <h2>Card</h2>
-      <Buton />
+      <h1 className="title">{lang}</h1>
+      <img className="images" src={img} alt="img" />
+      <Buton btn={btn} />
     </div>
   )
 }
