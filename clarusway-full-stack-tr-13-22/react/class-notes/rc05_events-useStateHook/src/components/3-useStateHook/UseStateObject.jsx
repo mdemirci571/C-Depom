@@ -37,8 +37,12 @@ const UseStateObject = () => {
     setPerson({ ...person, salary: person.salary - 500 })
   }
 
-  const handleClrName = () => {
-    setPerson({ ...person, name: "noname", surname: "noname" })
+  const handleNameToggle = () => {
+    setPerson({
+      ...person,
+      name: person.name.toUpperCase(),
+      surname: person.surname.toUpperCase(),
+    })
   }
   return (
     <div className="container text-center mt-4">
@@ -50,7 +54,7 @@ const UseStateObject = () => {
       <button onClick={handleSalaryInc} className="btn btn-success">
         Salary Inc
       </button>
-      <button onClick={handleClrName} className="btn btn-danger">
+      <button onClick={handleNameToggle} className="btn btn-danger">
         CLR
       </button>
       <button onClick={handleSalaryDec} className="btn btn-warning">
