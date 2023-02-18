@@ -8,3 +8,12 @@
 //* Bir state'e baslangıc degeri constructor metodu icersinde this.state ile atanabilir
 //* constructor'in disinda state, setState() metodu ile degistilebilir.
 //* ====================================================================
+import React from "react"
+
+class Counter extends React.Component {
+  render() {
+    return <div>Counter</div>
+  }
+}
+
+export default Counter
