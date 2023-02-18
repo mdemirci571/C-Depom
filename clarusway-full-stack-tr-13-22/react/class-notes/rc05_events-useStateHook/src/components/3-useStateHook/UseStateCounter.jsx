@@ -18,10 +18,11 @@
 //?    https://reactjs.org/docs/hooks-rules.html
 //* =============================================================
 
-import React from "react"
 
 const UseStateCounter = () => {
-  return <div>UseStateCounter</div>
+  return (
+    <div>useStateCounter</div>
+  )
 }
 
 export default UseStateCounter
