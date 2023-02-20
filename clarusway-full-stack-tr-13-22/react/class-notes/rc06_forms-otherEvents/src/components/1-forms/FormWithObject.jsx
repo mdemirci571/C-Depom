@@ -57,7 +57,7 @@ const FormWithObject = () => {
           className="form-control"
           id="email"
           onChange={handleFormData}
-          value={email}
+          value={email || ""}
           required
         />
       </div>
@@ -70,7 +70,7 @@ const FormWithObject = () => {
           className="form-control"
           id="password"
           onChange={handleFormData}
-          value={password}
+          value={password || ""}
           required
         />
       </div>
@@ -84,7 +84,7 @@ const FormWithObject = () => {
           className="form-control"
           id="address"
           onChange={handleFormData}
-          value={address}
+          value={address || ""}
         />
       </div>
 
