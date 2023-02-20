@@ -27,6 +27,8 @@ const UseStateObject = () => {
     salary: 10000,
   })
 
+  const [toggle, setToggle] = useState(false)
+
   console.log(person)
 
   const handleSalaryInc = () => {
@@ -38,12 +40,22 @@ const UseStateObject = () => {
   }
 
   const handleNameToggle = () => {
-    setPerson({
-      ...person,
-      name: person.name.toUpperCase(),
-      surname: person.surname.toUpperCase(),
-    })
+    if (!toggle) {
+      setPerson({
+        ...person,
+        name: person.name.toUpperCase(),
+        surname: person.surname.toUpperCase(),
+      })
+    } else {
+      setPerson({
+        ...person,
+        name: person.name.toLowerCase(),
+        surname: person.surname.toLowerCase(),
+      })
+    }
+    setToggle(!toggle)
   }
+
   return (
     <div className="container text-center mt-4">
       <h2 className="text-danger">Use State Object</h2>
