@@ -9,8 +9,22 @@ const Form = () => {
     // console.log(e.target.value)
     setUsername(e.target.value)
   }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    alert(`
+       username:${username}
+       email:${email}
+       password:${password}
+    `)
+
+    setEmail("")
+    setPassword("")
+    setUsername("")
+  }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <h2 className="display-6 text-danger">FORMS</h2>
 
       <div className="mb-3">
@@ -23,12 +37,13 @@ const Form = () => {
           id="username"
           onChange={handleUsername}
           value={username}
+          required
         />
       </div>
 
       <div className="mb-3">
         <label htmlFor="email" className="form-label">
-          Email
+          Email: <span>{email}</span>
         </label>
         <input
           type="email"
@@ -36,6 +51,7 @@ const Form = () => {
           id="email"
           onChange={(e) => setEmail(e.target.value)}
           value={email}
+          required
         />
       </div>
       <div className="mb-3">
@@ -48,6 +64,7 @@ const Form = () => {
           id="password"
           onChange={(e) => setPassword(e.target.value)}
           value={password}
+          required
         />
       </div>
 
