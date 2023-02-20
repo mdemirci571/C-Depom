@@ -11,7 +11,11 @@ const FormWithObject = () => {
   //! Destr.
   const { username, email, password, address } = formData
 
-  const handleFormData = () => {}
+  const handleFormData = (e) => {
+    // console.log(e.target.value)
+    // console.log(e.target.id)
+    setFormData({ ...formData, [e.target.id]: e.target.value })
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -19,7 +23,10 @@ const FormWithObject = () => {
        username:${username}
        email:${email}
        password:${password}
+       address:${address}
     `)
+
+    setFormData({ username: "", email: "", password: "", address: "" })
   }
 
   return (
@@ -35,7 +42,8 @@ const FormWithObject = () => {
           className="form-control"
           id="username"
           onChange={handleFormData}
-          value={username}
+          value={username || ""} //? username yoksa input'un value'suna null ata
+          //! controlled - uncontrolled error (eger bir input value'su undefined olursa boyle bir hata gelir.)
           required
         />
       </div>
