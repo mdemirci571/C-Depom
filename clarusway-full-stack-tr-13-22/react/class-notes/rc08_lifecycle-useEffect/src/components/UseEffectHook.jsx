@@ -51,7 +51,7 @@ const UseEffectHook = () => {
   }
 
   useEffect(() => {
-    console.log("MOunting")
+    console.log("Mounting")
     const timer = setInterval(fetchData, 1000)
     return () => {
       clearInterval(timer)
