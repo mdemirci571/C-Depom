@@ -9,8 +9,12 @@ const Home = () => {
   const BASE_URL = "https://tutorial-api.fullstack.clarusway.com/tutorials/"
 
   const getTutorials = async () => {
-    const { data } = await axios(BASE_URL)
-    setTutorials(data)
+    try {
+      const { data } = await axios(BASE_URL)
+      setTutorials(data)
+    } catch (error) {
+      console.log(error)
+    }
   }
   console.log(tutorials)
   //? componentDidMount
