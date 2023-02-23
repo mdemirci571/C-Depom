@@ -22,14 +22,14 @@ SOLUTION
 │     └── index.html
 ├── src
 │    ├── components
-│    │       ├── Home.js
-│    │       │     ├── Doctors.js
-│    │       │     └── Appointments.js
+│    │       ├── HastaEkle.jsx
 │    │       │
-│    │       └── Doctors.js
-│    │             ├── Appoinment.js
-│    │             └── Button.js
-│    │            
+│    │       └── HastaListe.jsx
+│    │
+│    ├── helper
+│    │       └── Home.jsx
+│    │ 
+│    │ 
 │    ├── App.js
 │    ├── App.css
 │    ├── index.js
@@ -79,5 +79,11 @@ Build a Hospital Appointment App using ReactJS.
 ## Notes
 
 - You can add additional functionalities to your app.
+
+## Additional Data
+
+  - [Data.js](./helpers/data.js)
+  - [images](./helpers/)
+
 
 **<p align="center">&#9786; Happy Coding &#9997;</p>**
