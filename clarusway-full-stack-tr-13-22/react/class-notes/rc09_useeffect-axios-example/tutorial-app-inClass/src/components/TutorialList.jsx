@@ -15,11 +15,20 @@ import axios from "axios"
 // ]
 
 const TutorialList = ({ tutorials, getTutorials }) => {
-
   const deleteTutorial = async (id) => {
     const BASE_URL = "https://tutorial-api.fullstack.clarusway.com/tutorials"
     try {
       await axios.delete(`${BASE_URL}/${id}/`)
+    } catch (error) {
+      console.log(error)
+    }
+    getTutorials()
+  }
+
+  const editTutorial = async ({ id, title, description }) => {
+    const BASE_URL = "https://tutorial-api.fullstack.clarusway.com/tutorials"
+    try {
+      await axios.put(`${BASE_URL}/${id}/`, { title, description })
     } catch (error) {
       console.log(error)
     }
@@ -52,6 +61,13 @@ const TutorialList = ({ tutorials, getTutorials }) => {
                     size={20}
                     type="button"
                     className="me-2 text-warning"
+                    onClick={() =>
+                      editTutorial({
+                        id: 502,
+                        title: "dokanmayin",
+                        description: "REACT",
+                      })
+                    }
                   />
                   <AiFillDelete
                     size={22}
