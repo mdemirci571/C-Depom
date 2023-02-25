@@ -1,6 +1,6 @@
-import Content from "./Content"
-import { Footer } from "./Footer"
-import Header from "./Header"
+import Content from "./Content";
+import { Footer } from "./Footer";
+import Header from "./Header";
 
 //* App Componenti
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <Content />
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
