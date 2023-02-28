@@ -5,6 +5,7 @@ import Home from "./pages/Home"
 import People from "./pages/People"
 import NotFound from "./pages/NotFound"
 import { Routes, Route } from "react-router-dom"
+import Paths from "./pages/Paths"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/people" element={<People />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/paths" element={<Paths />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 
