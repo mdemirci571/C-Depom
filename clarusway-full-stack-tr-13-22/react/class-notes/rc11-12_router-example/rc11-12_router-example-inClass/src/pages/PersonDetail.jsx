@@ -6,11 +6,11 @@ const PersonDetail = () => {
   //! navigate ile gonderilen state'i yakalamak icin useLocation Hook'u kullanilabilir.
   //! Bu durumda veri, state ile geldigi icin yeniden fetch yapilmasina gerek kalmaz
   // const { state: person } = useLocation()
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
 
+  //! Linkteki parametreyi almak icin useParams Hook'u kullanilabilir.
   const { id } = useParams()
   const [person, setPerson] = useState({})
-  const navigate = useNavigate()
 
   const getPerson = () => {
     fetch(`https://reqres.in/api/users/${id}`)
