@@ -1,9 +1,28 @@
-import { useLocation } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { useLocation, useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 
 const PersonDetail = () => {
-  const { state: person } = useLocation()
+  //! navigate ile gonderilen state'i yakalamak icin useLocation Hook'u kullanilabilir.
+  //! Bu durumda veri, state ile geldigi icin yeniden fetch yapilmasina gerek kalmaz
+  // const { state: person } = useLocation()
+  // const navigate = useNavigate()
+
+  const { id } = useParams()
+  const [person, setPerson] = useState({})
   const navigate = useNavigate()
+
+  const getPerson = () => {
+    fetch(`https://reqres.in/api/users/${id}`)
+      .then((res) => res.json())
+      .then((data) => setPerson(data.data))
+      .catch((err) => console.log(err))
+  }
+  useEffect(() => {
+    getPerson()
+  }, [])
+
+  console.log(id)
 
   return (
     <div className="container text-center">
