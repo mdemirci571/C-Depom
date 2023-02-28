@@ -1,6 +1,20 @@
 import { useState, useEffect } from "react"
 import { Link, Navigate, useNavigate } from "react-router-dom"
 
+//? Link, NavLink ve Navigate componentleri declerative routing
+//? gerceklestirmek icin kullanilir.
+//? Ornegin: Link ve NavLink Sayfada gorulebilen, kullanciyla
+//? bir etkilesim icerisinde bulunarak yonledirme yapilan bir
+//? componentlerdir. (Nav v.b)
+
+//? Navigate componenti sayfada gorulmeyen ve programsal olarak bir linkin
+//? bir baska linke yonledirilmesi icin kullanilabilir. (v5 -> Redirect)
+//? Navigate, Component seviyesi Routing icin kullanilir.
+
+//* useNavigate() ise imperative routing icin elverislidir.
+//* Ornegin bir fonksiyon,event veye UseEffect icerisinde programsal
+//* olarak yonledirme yapmak icin kullanilabilir.
+
 const People = () => {
   const [people, setPeople] = useState([])
   const navigate = useNavigate()
