@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom"
 
 const Paths = () => {
   return (
@@ -14,11 +14,17 @@ const Paths = () => {
         experts!
       </p>
       <div>
-        <Link className="btn btn-success w-50" to="">
+        {/* Relative */}
+        <Link className="btn btn-success w-50" to="fullstack/react">
+          {/* Absolute */}
+          {/* <Link className="btn btn-success w-50" to="/paths/fullstack"> */}
           Fullstack
         </Link>
-        <button className="btn btn-warning w-50">Aws-Devops</button>
+        <Link className="btn btn-warning w-50" to="">
+          Aws-Devops
+        </Link>
       </div>
+      <Outlet />
     </div>
   )
 }

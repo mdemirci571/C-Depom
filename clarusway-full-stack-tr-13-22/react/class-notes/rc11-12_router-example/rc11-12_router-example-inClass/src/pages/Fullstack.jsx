@@ -1,3 +1,5 @@
+import { Outlet } from "react-router-dom"
+
 const FullStack = () => {
   return (
     <div className="mt-4 text-center">
@@ -13,6 +15,8 @@ const FullStack = () => {
       <div>
         <button className="btn btn-outline-success mt-4">Learn More</button>
       </div>
+
+      <Outlet />
     </div>
   )
 }
