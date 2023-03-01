@@ -11,5 +11,7 @@ List of projects within React projects as follows;
 - [04 - Checkout Page](./004-Checkout-Page/README.md)
 
 - [05 - Appointment App](./005-Appointment-App/README.md)
+
+- [06 - React Sass Project ](./006-React-Sass-Project/README.md)
   
 
