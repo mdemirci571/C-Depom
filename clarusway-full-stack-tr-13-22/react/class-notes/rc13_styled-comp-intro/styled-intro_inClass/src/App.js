@@ -20,6 +20,14 @@ const App = () => {
         <Links href="https://www.clarusway.com" target="_blank">
           Clarusway Web Site
         </Links>
+
+        <Links small href="https://www.reactjs.org" target="_blank">
+          ReactJS
+        </Links>
+
+        <Links small href="https://www.npmjs.org" target="_blank">
+          NPM
+        </Links>
       </Sarmal>
     </>
   )
