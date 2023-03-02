@@ -20,5 +20,5 @@ export const Button = styled.button`
 export const FS13Button = styled(Button)`
   background-color: ${({ react }) => (react ? "red" : "white")};
   color: ${({ react }) => (react ? "white" : "red")};
-  border-color: ${({ react }) => (react ? "white" : "red")};
+  border-color: ${({ react }) => react || "red"};
 `
