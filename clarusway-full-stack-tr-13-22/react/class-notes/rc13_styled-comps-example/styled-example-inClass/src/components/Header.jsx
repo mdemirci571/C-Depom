@@ -1,5 +1,6 @@
 import Button from "./styled/Button"
 import Flex from "./styled/Flex"
+import Image from "./styled/Image"
 import Nav from "./styled/Nav"
 
 const Header = () => {
@@ -26,6 +27,8 @@ const Header = () => {
           </p>
           <Button bg="#AF3A53">Start your New Carier</Button>
         </div>
+
+        <Image src="./images/hero.jpg" />
       </Flex>
     </div>
   )
