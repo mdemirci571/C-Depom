@@ -7,7 +7,7 @@ const App = () => {
       <Button>Send</Button>
       <Button primary>Send</Button>
       <FS13Button react>CALIS</FS13Button>
-      <FS13Button>DAHA COK CALIS</FS13Button>
+      <FS13Button>DINLEN</FS13Button>
     </>
   )
 }
