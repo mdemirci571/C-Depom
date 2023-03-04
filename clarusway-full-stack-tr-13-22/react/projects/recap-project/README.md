@@ -97,3 +97,10 @@ Build a Checkout Page App using ReactJS.
 
 
 **<p align="center">&#9786; Happy Coding &#9997;</p>**
+
+
+- react-router
+- axios 
+- state 
+- bootsrap
+- useEffect
