@@ -1,8 +1,8 @@
-import React from 'react'
-
 const Header = () => {
   return (
-    <div>Header</div>
+    <div>
+      <h1 className="text-danger">Task Tracker</h1>
+    </div>
   )
 }
 
