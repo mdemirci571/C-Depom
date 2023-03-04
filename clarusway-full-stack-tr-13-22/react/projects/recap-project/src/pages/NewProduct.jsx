@@ -30,6 +30,7 @@ const NewProduct = () => {
     }
   }
 
+
   return (
     <div className="container">
       <ProductForm
