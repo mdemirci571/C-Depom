@@ -5,9 +5,26 @@ const ProductCard = ({ item, getProducts }) => {
   const url = process.env.REACT_APP_API_URL;
   const { name, image, price, dampingRate, amount, id } = item;
 
-  const handleMinus = () => {};
+  const handleMinus =async () => {
+    try {
+      await axios.put(`${url}/${id}`,{
+        ...item, amount: amount - 1
+      });
+    } catch (error) {
+      
+    }
+    getProducts();
+  };
 
-  const handlePlus = () => {};
+  const handlePlus = async () => {
+    try {
+      await axios.put(`${url}/${id}`, {
+        ...item,
+        amount: amount + 1,
+      });
+    } catch (error) {}
+    getProducts();
+  };
 
   const handleRemove = async () => {
     try {
