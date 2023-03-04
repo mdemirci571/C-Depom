@@ -26,7 +26,7 @@ const ProductCard = ({item}) => {
                   {(price * dampingRate).toFixed(2)}
                 </span>
                 <span className="h5 text-dark text-decoration-line-through">
-                  {price}
+                  {parseFloat(price).toFixed(2)}
                 </span>
               </p>
             </div>
