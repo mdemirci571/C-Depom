@@ -5,9 +5,12 @@ import AddTask from "../components/AddTask";
 import Tasks from "../components/Tasks";
 import axios from "axios";
 
+
+
 const Home = () => {
   const BASE_URL = "https://63fa2bf8beec322c57eeb667.mockapi.io/tasks";
   const [showAddTask, setShowAddTask] = useState(false);
+  const [tasks, setTasks] = useState([])
 
   const showClose = () => {
     setShowAddTask(!showAddTask);
@@ -17,6 +20,7 @@ const Home = () => {
     try {
       const { data } = await axios(BASE_URL);
       console.log(data);
+      setTasks(data)
     } catch (error) {
       console.log(error);
     }
@@ -27,12 +31,12 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bg-warning text-center d-flex justify-content-center">
+    <div className="home bg-warning text-center d-flex justify-content-center">
       <div className="p-5 border border-primary bg-light d-flex flex-column m-4 w-50">
         <Header />
         <Dugme visible={showAddTask} onShow={showClose} />
         {showAddTask && <AddTask />}
-        <Tasks />
+        <Tasks toDo={tasks} getTasks={getTasks} />
       </div>
     </div>
   );

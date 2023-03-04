@@ -1,12 +1,24 @@
-import React from 'react'
-import Task from './Task'
+import React, { useState } from "react";
+import Task from "./Task";
 
-const Tasks = () => {
+const Tasks = ({ toDo, getTasks }) => {
+  const [isFinished, setIsFinished] = useState(false);
+
   return (
     <div>
-      <Task/>
+      {toDo.map((item) => {
+        return (
+          <Task
+            item={item}
+            key={item.id}
+            isFinished={isFinished}
+            setIsFinished={setIsFinished}
+            getTasks={getTasks}
+          />
+        );
+      })}
     </div>
-  )
-}
+  );
+};
 
-export default Tasks
+export default Tasks;
