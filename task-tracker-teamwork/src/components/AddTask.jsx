@@ -1,15 +1,16 @@
-const AddTask = () => {
+const AddTask = ({handleSubmit, handleChange}) => {
   return (
     <div>
-      <form className="form-group">
+      <form className="form-group" onSubmit={handleSubmit}>
 
         <div className="form-group text-start">
           <label htmlFor="formGroupExampleInput">Add Task</label>
           <input
             type="text"
             className="form-control"
-            id="addTask"
+            id="name"
             placeholder="Add Task"
+            onChange={(e)=>handleChange(e)}
           />
         </div>
         <div className="form-group text-start">
@@ -17,8 +18,9 @@ const AddTask = () => {
           <input
             type="text"
             className="form-control"
-            id="dayTime"
+            id="date"
             placeholder="Add Day & Time"
+            onChange={(e)=>handleChange(e)}
           />
         </div>
 
