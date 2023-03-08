@@ -1,6 +1,8 @@
 import React from 'react'
 import { AboutContainer, IconContainer, InfoContainer, ProfileImg } from './About.style'
 import profile from "../../assets/about.png"
+import Icon from '../../components/icon/Icon';
+import { iconData } from '../../helper/iconData';
 
 const About = () => {
   return (
@@ -16,10 +18,12 @@ const About = () => {
         <h4>💬 You can ask me anything you want to know</h4>
       </InfoContainer>
       <IconContainer>
-
+        {iconData.map(item=> <a key={item.icon} href={item.href}>
+          <Icon icon={item.icon} path={item.path} hoverColor={item.color} />
+        </a>)}
       </IconContainer>
     </AboutContainer>
-  )
+  );
 }
 
 export default About
