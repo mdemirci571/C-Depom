@@ -1,25 +1,16 @@
 import styled from "styled-components"
 
-const Flex = styled.div`
+const NavStyled = styled.nav`
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
   padding: 1.5rem;
-  gap: 1rem;
-
-  /* @media (max-width: 700px) {
-    flex-direction: column;
-  } */
+  background-color: ${({ theme }) => theme.colors.primary};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     flex-direction: column;
     text-align: center;
   }
-
-  & div,
-  & ul {
-    flex: 1;
-  }
 `
 
-export default Flex
+export default NavStyled
