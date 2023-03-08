@@ -10,6 +10,9 @@ export const HeaderTitle = styled.h2`
   font-size: 3rem;
   color: ${({ theme }) => theme.colors.detailColor};
 
+  @media (max-width: ${({ theme }) => theme.screens.lg}) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const HeaderForm = styled.form`
