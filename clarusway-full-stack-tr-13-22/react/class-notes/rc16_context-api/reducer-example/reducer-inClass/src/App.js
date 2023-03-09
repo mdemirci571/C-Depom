@@ -1,5 +1,5 @@
 import UseReducerExample from "./UseReducerExample"
-import UseStateExample from "./UseStateExample"
+// import UseStateExample from "./UseStateExample"
 
 function App() {
   return (
