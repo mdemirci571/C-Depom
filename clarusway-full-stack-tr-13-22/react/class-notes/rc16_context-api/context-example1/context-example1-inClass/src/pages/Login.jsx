@@ -1,14 +1,25 @@
-import { useState } from "react";
-import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+import { useContext, useState } from "react"
+import Container from "react-bootstrap/Container"
+import Button from "react-bootstrap/Button"
+import Form from "react-bootstrap/Form"
+import { LoginContext } from "../context/LoginContext"
+import { useNavigate } from "react-router-dom"
 
 const Login = () => {
-  const [user, setUser] = useState({ email: "", password: "" });
+  //? Local State
+  // const [user, setUser] = useState({ email: "", password: "" })
+
+  //! 3-) Consuming of Login COntext
+  const { user, setUser } = useContext(LoginContext)
+
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+    e.preventDefault()
+    navigate("/")
+  }
+
+  console.log(user)
 
   return (
     <Container>
@@ -42,7 +53,7 @@ const Login = () => {
         </Container>
       </Form>
     </Container>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login
