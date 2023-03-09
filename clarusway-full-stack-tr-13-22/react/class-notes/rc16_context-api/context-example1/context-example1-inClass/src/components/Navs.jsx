@@ -7,6 +7,7 @@ import { useContext } from "react"
 import { LoginContext } from "../context/LoginContext"
 
 function Navs() {
+  // ? Consuming
   const { user, setUser } = useContext(LoginContext)
 
   return (
@@ -33,7 +34,7 @@ function Navs() {
             <Link className="nav-link" to="/people">
               People
             </Link>
-            {user.email ? (
+            {user?.email ? (
               <Link
                 className="nav-link"
                 to="/login"
