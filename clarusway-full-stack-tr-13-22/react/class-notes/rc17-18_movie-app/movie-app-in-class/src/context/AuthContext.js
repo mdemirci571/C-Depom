@@ -10,8 +10,6 @@ export const AuthContext = createContext();
 //   };
 
 const AuthContextProvider = ({ children }) => {
-  const values = { currentUser: { displayName: "felix franko" } };
-
   const createUser = async (email, password) => {
     try {
       //? yeni bir kullanıcı oluşturmak için kullanılan firebase metodu
@@ -26,6 +24,7 @@ const AuthContextProvider = ({ children }) => {
     }
   };
 
+  const values = { createUser, currentUser: { displayName: "felix franko" } };
   return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>;
 };
 
