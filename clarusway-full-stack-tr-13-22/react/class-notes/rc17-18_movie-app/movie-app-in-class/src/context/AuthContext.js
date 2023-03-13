@@ -3,6 +3,7 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import React, { createContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { auth } from "../auth/firebase";
 
 // export const {Provider} = createContext()
@@ -13,6 +14,7 @@ export const AuthContext = createContext();
 //   };
 
 const AuthContextProvider = ({ children }) => {
+  const navigate = useNavigate();
   const createUser = async (email, password) => {
     try {
       //? yeni bir kullanıcı oluşturmak için kullanılan firebase metodu
@@ -21,6 +23,7 @@ const AuthContextProvider = ({ children }) => {
         email,
         password
       );
+      navigate("/");
       console.log(userCredential);
     } catch (error) {
       console.log(error);
@@ -30,6 +33,7 @@ const AuthContextProvider = ({ children }) => {
   const signIn = async (email, password) => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
