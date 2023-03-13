@@ -4,12 +4,12 @@ const Navbar = () => {
   return (
     <div>
       <nav
-        className="relative flex w-full flex-wrap items-center justify-between bg-neutral-900 py-3 text-neutral-200 shadow-lg lg:flex-wrap lg:justify-start"
+        className="flex w-full flex-wrap items-center justify-between bg-neutral-100 dark:bg-neutral-900 py-3 dark:text-neutral-200 shadow-lg lg:flex-wrap lg:justify-start fixed top-0 z-20"
         data-te-navbar-ref=""
       >
         <div className="flex w-full flex-wrap items-center justify-between px-6">
           <a className="pr-2 text-xl font-semibold text-white" href="#">
-            Navbar
+            React Movie App
           </a>
 
           {/* Collapsible wrapper */}
@@ -70,6 +70,7 @@ const Navbar = () => {
           {/* Right elements */}
         </div>
       </nav>
+      <div className="h-[52px]"></div>
     </div>
   );
 };
