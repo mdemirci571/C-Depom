@@ -1,6 +1,7 @@
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut,
 } from "firebase/auth";
 import React, { createContext } from "react";
 import { useNavigate } from "react-router-dom";
@@ -39,9 +40,14 @@ const AuthContextProvider = ({ children }) => {
     }
   };
 
+  const logOut = () => {
+    signOut(auth);
+  };
+
   const values = {
     createUser,
     signIn,
+    logOut,
     currentUser: { displayName: "felix franko" },
   };
   return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>;
