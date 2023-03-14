@@ -1,11 +1,23 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import MovieCard from "../components/MovieCard";
 import { MovieContext } from "../context/MovieContext";
 
 const Main = () => {
   const { movies, loading } = useContext(MovieContext);
+  const [searchTerm, setSearchTerm] = useState("");
   return (
-    <div>
+    <>
+      <form className="flex justify-center p-2">
+        <input
+          type="search"
+          className="w-80 h-8 rounded-md p-1 m-2"
+          placeholder="Search a movie..."
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <button className="btn-danger-bordered" type="submit">
+          Search
+        </button>
+      </form>
       <div className="flex justify-center flex-wrap">
         {loading ? (
           <div
@@ -18,7 +30,7 @@ const Main = () => {
           movies.map((movie) => <MovieCard key={movie.id} {...movie} />)
         )}
       </div>
-    </div>
+    </>
   );
 };
 
