@@ -1,8 +1,11 @@
 import {
   createUserWithEmailAndPassword,
+  GoogleAuthProvider,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import React, { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -24,7 +27,7 @@ const AuthContextProvider = ({ children }) => {
     userObserver();
   }, []);
 
-  const createUser = async (email, password) => {
+  const createUser = async (email, password, displayName) => {
     try {
       //? yeni bir kullanıcı oluşturmak için kullanılan firebase metodu
       let userCredential = await createUserWithEmailAndPassword(
@@ -32,6 +35,10 @@ const AuthContextProvider = ({ children }) => {
         email,
         password
       );
+      //? kullanıcı profilini güncellemek için kullanılan firebase metodu
+      await updateProfile(auth.currentUser, {
+        displayName: displayName,
+      });
       navigate("/");
       toastSuccessNotify("Registered successfully!");
     } catch (error) {
@@ -58,6 +65,7 @@ const AuthContextProvider = ({ children }) => {
   };
 
   const userObserver = () => {
+    //? Kullanıcının signin olup olmadığını takip eden ve kullanıcı değiştiğinde yeni kullanıcıyı response olarak dönen firebase metodu
     onAuthStateChanged(auth, (user) => {
       if (user) {
         const { email, displayName, photoURL } = user;
@@ -69,10 +77,31 @@ const AuthContextProvider = ({ children }) => {
     });
   };
 
+  //* https://console.firebase.google.com/
+  //* => Authentication => sign-in-method => enable Google
+  //! Google ile girişi enable yap
+  //* => Authentication => settings => Authorized domains => add domain
+  //! Projeyi deploy ettikten sonra google sign-in çalışması için domain listesine deploy linkini ekle
+  const signUpProvider = () => {
+    //? Google ile giriş yapılması için kullanılan firebase metodu
+    const provider = new GoogleAuthProvider();
+    //? Açılır pencere ile giriş yapılması için kullanılan firebase metodu
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log(result);
+        navigate("/");
+        toastSuccessNotify("Logged in successfully!");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   const values = {
     createUser,
     signIn,
     logOut,
+    signUpProvider,
     currentUser,
   };
   return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>;
