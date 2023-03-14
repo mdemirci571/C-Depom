@@ -31,7 +31,11 @@ const AuthContextProvider = ({ children }) => {
     }
   };
 
+  //* https://console.firebase.google.com/
+  //* => Authentication => sign-in-method => enable Email/password
+  //! Email/password ile girişi enable yap
   const signIn = async (email, password) => {
+    //? mevcut kullanıcının giriş yapması için kullanılan firebase metodu
     try {
       await signInWithEmailAndPassword(auth, email, password);
       navigate("/");
