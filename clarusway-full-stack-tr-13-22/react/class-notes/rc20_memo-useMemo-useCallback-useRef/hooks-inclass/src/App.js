@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import Header from "./components/Header";
 import HeaderMemo from "./components/HeaderMemo";
 import TaxComp from "./components/TaxComp";
+import UseRefComp from "./components/UseRefComp";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,7 +13,7 @@ function App() {
 
   const taxData1 = useRef({ taxRate: 0.18, ship: 25 });
   console.log(taxData1)//hafızada referansı sabit ama kendisi değişebilir olan verileri tanımlamak istiyorsak
-  
+
   return (
     <div className="container mt-2">
       <div>
@@ -39,6 +40,9 @@ function App() {
       {/* <TaxComp taxData={taxData} /> */}
       {/* <TaxComp taxData={taxDataState} /> */}
       <TaxComp taxData={taxData1} />
+
+      <hr/>
+      <UseRefComp />
     </div>
   );
 }
