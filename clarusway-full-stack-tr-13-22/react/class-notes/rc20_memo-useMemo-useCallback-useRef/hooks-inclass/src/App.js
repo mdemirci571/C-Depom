@@ -5,6 +5,7 @@ import TaxComp from "./components/TaxComp";
 import UseRefComp from "./components/UseRefComp";
 import axios from "axios";
 import Card from "./components/Card";
+import ClearButton from "./components/ClearButton";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -43,9 +44,14 @@ function App() {
     );
   },[data,search])//refereansı sabitlemiş oluyor ve hesapmlanın sonucunu belleğe alıyor
 
-  const calculation = expensiveCalculation(count)
+  // const calculation = expensiveCalculation(count)
 
   const calculationMemo = useMemo(() => expensiveCalculationMemo(count),[count]);
+
+  const handleClear = () =>{
+    setSearch("")
+    setUser("anthony")
+  }
 
   return (
     <div className="container mt-2">
@@ -83,8 +89,10 @@ function App() {
       {/* <Card data={filteredData} /> */}
       {/* <Card data={filteredMemoData} /> */}
       <hr />
-      <p>Expensive Calculation : {calculation}</p>
+      {/* <p>Expensive Calculation : {calculation}</p> */}
       <p>Expensive Calculation Memo : {calculationMemo}</p>
+      <hr />
+      <ClearButton handleClear={handleClear} />
     </div>
   );
 }
@@ -102,7 +110,7 @@ const expensiveCalculation = (num) => {
 
 const expensiveCalculationMemo = (num) => {
   console.log("Calculating Memo...");
-  for (let i = 0; i < 10000000000; i++) {
+  for (let i = 0; i < 10000000; i++) {
     num += 1;
   }
   console.log("Calculating memo completed...");
