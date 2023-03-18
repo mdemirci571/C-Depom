@@ -8,7 +8,7 @@ import React,{memo} from "react";
 
 // export default HeaderMemo;
 
-
+// memo 2.kullanım
 const HeaderMemo = ({count}) => {
   console.log("Render => HeaderMemo componenti")
   return <div className="text-center text-success">HeaderMemo Componenti : {count}</div>;
