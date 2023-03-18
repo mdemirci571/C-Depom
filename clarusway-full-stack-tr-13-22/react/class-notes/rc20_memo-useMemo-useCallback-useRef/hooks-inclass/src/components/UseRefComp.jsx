@@ -1,9 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const UseRefComp = () => {
   console.log("Render => useRefComp")
   const [text,setText] = useState("")
   const inputRef = useRef()
+  const divRef = useRef()
 
   const handleSearch = () =>{
     console.log(text)
@@ -11,9 +12,16 @@ const UseRefComp = () => {
     console.log(inputRef)
     console.log(inputRef.current.value);
     setText(inputRef.current.value);
+    console.log(divRef.current)
+    console.log(divRef.current.lastElementChild)
+    console.log(divRef.current.lastElementChild.lastElementChild);
+    console.log(divRef.current.lastElementChild.lastElementChild.innerText);
   }
+  useEffect(()=>{
+    inputRef.current.focus()
+  },[])
   return (
-    <div>
+    <div ref={divRef}>
       UseRefComp
       <div style={{ display: "flex", justifyContent: "center" }}>
         {/* <input
