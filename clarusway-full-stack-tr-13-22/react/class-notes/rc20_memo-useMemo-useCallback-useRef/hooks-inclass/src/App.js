@@ -43,6 +43,10 @@ function App() {
     );
   },[data,search])//refereansı sabitlemiş oluyor ve hesapmlanın sonucunu belleğe alıyor
 
+  const calculation = expensiveCalculation(count)
+
+  const calculationMemo = useMemo(() => expensiveCalculationMemo(count),[count]);
+
   return (
     <div className="container mt-2">
       <div>
@@ -77,9 +81,30 @@ function App() {
         <input type="text" value={search} onChange={handleSearch} />
       </div>
       {/* <Card data={filteredData} /> */}
-      <Card data={filteredMemoData} />
+      {/* <Card data={filteredMemoData} /> */}
+      <hr />
+      <p>Expensive Calculation : {calculation}</p>
+      <p>Expensive Calculation Memo : {calculationMemo}</p>
     </div>
   );
 }
 
 export default App;
+
+const expensiveCalculation = (num) => {
+  console.log("Calculating...");
+  for (let i = 0; i < 10000000000; i++) {
+    num += 1;
+  }
+  console.log("Calculating completed...");
+  return num;
+};
+
+const expensiveCalculationMemo = (num) => {
+  console.log("Calculating Memo...");
+  for (let i = 0; i < 10000000000; i++) {
+    num += 1;
+  }
+  console.log("Calculating memo completed...");
+  return num;
+};
