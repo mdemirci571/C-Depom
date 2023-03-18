@@ -64,6 +64,8 @@ const TypoButtons = () => {
         <Stack
           direction={{ xs: "column", sm: "row" }}
           spacing={{ xs: 1, sm: 2, md: 4 }}
+          justifyContent="center"
+          mt={2}
         >
           <Button variant="text" color="warning">
             Text
