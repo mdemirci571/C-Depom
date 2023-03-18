@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 const ClearButton = ({handleClear}) => {
   console.log("Render => ClearBtn component ")
@@ -7,4 +7,4 @@ const ClearButton = ({handleClear}) => {
   </div>;
 };
 
-export default ClearButton;
+export default memo(ClearButton);

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Header from "./components/Header";
 import HeaderMemo from "./components/HeaderMemo";
 import TaxComp from "./components/TaxComp";
@@ -53,6 +53,11 @@ function App() {
     setUser("anthony")
   }
 
+  const handleClearCallback = useCallback(() => {
+    setSearch("");
+    setUser("anthony");
+  },[]);//fonksiyonun kendisini memoized ediyor. bellekte tutuyor
+
   return (
     <div className="container mt-2">
       <div>
@@ -92,7 +97,8 @@ function App() {
       {/* <p>Expensive Calculation : {calculation}</p> */}
       <p>Expensive Calculation Memo : {calculationMemo}</p>
       <hr />
-      <ClearButton handleClear={handleClear} />
+      {/* <ClearButton handleClear={handleClear} /> */}
+      <ClearButton handleClear={handleClearCallback} />
     </div>
   );
 }
@@ -116,3 +122,9 @@ const expensiveCalculationMemo = (num) => {
   console.log("Calculating memo completed...");
   return num;
 };
+
+//!  React'in useCallback Hook'unu React'in useMemo Hook'u ile karıştırmayalım. useCallback, işlevleri hafızaya almak için kullanılırken, useMemo, değerleri hafızaya almak için kullanılır.
+
+//!  React'in useCallback Hook'unu React'in memo API'si ile karıştırmayalım. useCallback, işlevleri not almak için kullanılırken, React memo, yeniden oluşturmaları önlemek için React bileşenlerini sarmak için kullanılır.
+
+//!  React'in useRef Hook'unu React'in useState hooku ile karıştırmayalım. useRef, component’in tekrar render olmasını tetiklemez, useState, bir değişken değiştiğinde useState component’in tekrar render olmasını tetikler.
