@@ -26,7 +26,8 @@ function App() {
         Change User
       </button>
       <hr />
-      <HeaderMemo user={user} />
+      {/* <HeaderMemo user={user} /> */}
+      <HeaderMemo count={count} />
     </div>
   );
 }
