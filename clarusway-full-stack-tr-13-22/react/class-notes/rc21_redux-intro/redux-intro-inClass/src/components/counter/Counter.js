@@ -1,6 +1,6 @@
 import "./Counter.css"
 import { useDispatch, useSelector } from "react-redux"
-
+import { dec, inc, reset } from "../../redux/actions/counterAction"
 
 //! Reducer'lara key olarak isim atamasi yapilmazsa bu sekilde cagrilabilriler.
 //? const counter = useSelector((state) => state.counterReducer.counter)
@@ -19,19 +19,22 @@ const Counter = () => {
       <div>
         <button
           className="counter-button positive"
-          onClick={() => dispatch({ type: "INCREASE" })}
+          // onClick={() => dispatch({ type: "INCREASE" })}
+          onClick={() => dispatch(inc())}
         >
           increase
         </button>
         <button
           className="counter-button zero"
-          onClick={() => dispatch({ type: "RESET" })}
+          // onClick={() => dispatch({ type: "RESET" })}
+          onClick={() => dispatch(reset())}
         >
           reset
         </button>
         <button
           className="counter-button negative"
-          onClick={() => dispatch({ type: "DECREASE" })}
+          // onClick={() => dispatch({ type: "DECREASE" })}
+          onClick={() => dispatch(dec())}
         >
           decrease
         </button>
