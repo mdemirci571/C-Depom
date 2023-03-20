@@ -1,3 +1,5 @@
+import { DECREASE, INCREASE, RESET } from "../types/counterTypes"
+
 const initialState = {
   counter: 0, //? Global state
 }
@@ -6,11 +8,11 @@ const initialState = {
 //? Bir dis bagimlilik olmamali
 const counterReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "INCREASE":
+    case INCREASE:
       return { counter: state.counter + 1 }
-    case "DECREASE":
+    case DECREASE:
       return { counter: state.counter - 1 }
-    case "RESET":
+    case RESET:
       return { counter: 0 }
     default:
       return state
