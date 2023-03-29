@@ -1,6 +1,11 @@
 // import axios from "axios"
 import { useDispatch, useSelector } from "react-redux"
-import { fetchFail, getSuccess, fetchStart } from "../features/stockSlice"
+import {
+  fetchFail,
+  getSuccess,
+  fetchStart,
+  getProCatBrandsSuccess,
+} from "../features/stockSlice"
 import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify"
 import useAxios from "./useAxios"
 
@@ -64,7 +69,12 @@ const useStockCall = () => {
     }
   }
 
-  return { getStockData, deleteStockData, postStockData, putStockData }
+  return {
+    getStockData,
+    deleteStockData,
+    postStockData,
+    putStockData,
+  }
 }
 
 export default useStockCall
