@@ -26,34 +26,57 @@ const Products = () => {
   const handleClose = () => setOpen(false)
 
   const columns = [
-    { field: "id", headerName: "ID", width: 90 },
     {
-      field: "firstName",
-      headerName: "First name",
-      width: 150,
-      editable: true,
+      field: "id",
+      headerName: "#",
+      minWidth: 40,
+      maxWidth: 70,
+      flex: 1,
+      headerAlign: "center",
+      align: "center",
     },
     {
-      field: "lastName",
-      headerName: "Last name",
-      width: 150,
-      editable: true,
+      field: "category",
+      headerName: "Category",
+      headerAlign: "center",
+      align: "center",
+      flex: 3,
+      minWidth: 150,
     },
     {
-      field: "age",
-      headerName: "Age",
+      field: "brand",
+      headerName: "Brand",
+      minWidth: 150,
+      headerAlign: "center",
+      align: "center",
+      flex: 2,
+    },
+    {
+      field: "name",
+      headerName: "Name",
       type: "number",
-      width: 110,
-      editable: true,
+      headerAlign: "center",
+      align: "center",
+      minWidth: 150,
+      flex: 2,
+    },
+
+    {
+      field: "stock",
+      headerName: "Stock",
+      minWidth: 100,
+      headerAlign: "center",
+      align: "center",
+      flex: 0.7,
     },
     {
-      field: "fullName",
-      headerName: "Full name",
-      description: "This column has a value getter and is not sortable.",
-      sortable: false,
-      width: 160,
-      valueGetter: (params) =>
-        `${params.row.firstName || ""} ${params.row.lastName || ""}`,
+      field: "actions",
+      headerName: "Actions",
+      type: "number",
+      headerAlign: "center",
+      align: "center",
+      minWidth: 50,
+      flex: 1,
     },
   ]
 
@@ -90,9 +113,10 @@ const Products = () => {
         setInfo={setInfo}
       />
 
-      <Box sx={{ height: 400, width: "100%" }}>
+      <Box sx={{ width: "100%" }}>
         <DataGrid
-          rows={rows}
+          autoHeight
+          rows={products}
           columns={columns}
           initialState={{
             pagination: {
@@ -102,7 +126,6 @@ const Products = () => {
             },
           }}
           pageSizeOptions={[5]}
-          checkboxSelection
           disableRowSelectionOnClick
         />
       </Box>
