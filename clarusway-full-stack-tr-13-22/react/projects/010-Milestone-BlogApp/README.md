@@ -141,7 +141,7 @@ Build a Milestone Blog App using ReactJS.
 
 - Step 3 : You can use css frameworks like Bootstrap, Tailwind Css, Material UI.
 
-- Step 4 : You can view sample app on https://milestone-blogapp.vercel.app/.
+- Step 4 : You can view sample app on https://milestone-blogapps.vercel.app/.
 
 - Step 5 : Add project gif to your project and README.md file.
 
