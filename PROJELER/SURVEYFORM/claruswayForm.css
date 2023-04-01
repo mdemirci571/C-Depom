@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.nam label{
+display: block;
+margin-top: 10px;
+}
+input{
+    margin-bottom: 10px;
+   }
+   .sel{
+    display: block;
+    margin-bottom: 20px;
+   }
+.rec{
+    font-size: 15px;
+}

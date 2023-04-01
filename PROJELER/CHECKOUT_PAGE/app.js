@@ -70,13 +70,11 @@ let totalAll = () => {
 
 document.querySelector(".clear").addEventListener("click", () => {
   if (confirm("Are you Sure?")) {
-    localStorage.clear();
-    document.querySelectorAll(".stotal").forEach((a) => {
-      a.innerText = "";
+    document.querySelectorAll(".container").forEach((a) => { a.remove() })
+    document.querySelectorAll(".sum").forEach((a) => {
+      a.innerHTML = 0.00
     });
 
-    document.querySelectorAll("#quantity").forEach((a) => {
-      a.innerText = "";
-    });
+    localStorage.clear();
   }
 });

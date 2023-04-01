@@ -18,7 +18,7 @@ input.focus();
 buton.addEventListener("click", () => {
   input.focus();
   if (input.value == "") {
-    alert("please enter a number");
+    alert("Please enter a number");
   } else {
     skor = 4 - deneme;
     span.innerText = Number(`${deneme}`) + 1;
@@ -27,35 +27,35 @@ buton.addEventListener("click", () => {
     body.style.backgroundImage = img;
     number = Number(input.value);
     sayı.push(number);
-    giris.value = `Girdiginiz sayı: ${sayı}`;
+    giris.value = `The number you entered: ${sayı}`;
     input.value = "";
 
     if (num !== number) {
       deneme++;
 
       if (deneme === 5 && num !== number) {
-        sonuc.value = `Üzgünüm, bilemedin.😥`;
+        sonuc.value = `Sorry, you didn't know.😥`;
         input.setAttribute("disabled", "true");
         buton.setAttribute("disabled", "true");
-        alert("DENEME HAKKINIZ KALMADI. OYUN BİTTİ !");
+        alert("YOU HAVE NO RIGHT TO TRY. GAME OVER !");
         deneme -= 2;
-        input.value = `Aradıgınız sayı: ${num}`;
+        input.value = `The number you are looking for: ${num}`;
         input.style.color = "white";
         input.style.fontSize = "1.1rem";
         sonuc.style.fontSize = "1.1rem";
         giris.style.fontSize = "1.1rem";
       } else if (num < number) {
-        sonuc.value = `Tahmininizi azaltın.`;
+        sonuc.value = `Reduce your estimate.`;
       } else if (num > number) {
-        sonuc.value = `Tahmininizi artırın.`;
+        sonuc.value = `Increase your estimate.`;
       }
     } else {
       deneme++;
-      sonuc.value = `Tebrikler! Bildiniz.`;
+      sonuc.value = `Congratulations! you did know.`;
       input.setAttribute("disabled", "true");
       buton.setAttribute("disabled", "true");
-      alert("Tebrikler! Bildiniz.");
-      input.value = `Aradıgınız sayı: ${num}`;
+      alert("Congratulations! you did know.");
+      input.value = `The number you are looking for: ${num}`;
       sonuc.style.fontSize = "1.1rem";
       input.style.color = "white";
       input.style.fontSize = "1.1rem";

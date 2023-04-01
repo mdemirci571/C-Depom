@@ -11,7 +11,7 @@ height: 100vh;
 
 }
 .dv1{
-     background-image: url(/images/Img_1.png);
+     background-image: url(./images/Img_1.png);
      background-size:cover; 
      width: 70%;
      height: 70%;
@@ -23,7 +23,7 @@ height: 100vh;
      
 
 .dv2{
-    background-image: url(/images/Img_02.png);
+    background-image: url(./images/Img_02.png);
     position: absolute;
     width: 9000%;
     height: 9rem;

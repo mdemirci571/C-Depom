@@ -1,0 +1,64 @@
+*{margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+font-size: 20px;
+}
+h1{
+    text-align: center;
+    margin: 5px 0px;
+    font-size: 40px;
+}
+form{
+    background: rgb(238,174,202);
+background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(68,70,120,1) 100%);
+
+
+padding: 20px;
+width: fit-content;
+display: inline-block;
+box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    /* gölgelendirme */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+label {
+    display: inline-block;
+    text-align: left;
+    width: 120px;
+}
+.date{
+    
+   
+    padding: 10px 50px;
+}
+div{
+    margin: 20px 30px;
+}
+input{
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+.gen{
+    display: inline-block;
+  width: 40px;
+}
+
+#country{
+    border-radius: 10px;
+    padding: 10px 60px;
+}
+.buton{
+    background-color: crimson;
+    text-align: center;
+    padding: 10px 10px;
+    padding: 10px 30px;
+}
+.buton:hover{
+    cursor: pointer;
+    background-color: rgb(90, 67, 205);
+}
+body{
+    text-align: center;
+}

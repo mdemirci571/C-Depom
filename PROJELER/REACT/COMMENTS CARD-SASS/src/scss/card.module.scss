@@ -1,0 +1,44 @@
+@import "_variables.scss";
+
+.card {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+max-width: 300px;
+margin: 2rem auto;
+padding: 2rem;
+background-color: $color-5;
+border-radius: 1rem;
+
+h1{
+    color: rgb(169, 14, 14);
+    text-decoration:  underline;
+}
+p{
+    color: white;
+}
+
+img{
+    width: 100px;
+    border-radius: 50%;
+    margin: 1rem 0;
+}
+.buttons{
+button{
+border: none;
+margin-right: 0.5rem;
+border-radius: 10px;
+color: white;
+&:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+}
+.small{
+    padding: 0.5rem 1rem;
+    background-color: $color-2;
+}
+.large{
+    padding: 0.5rem 1.7rem;
+    background-color: $color-3;
+}
+}
+}

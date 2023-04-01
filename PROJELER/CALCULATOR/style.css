@@ -1,104 +1,86 @@
-@import"import.css";
-
 * {
-    padding: 0px;
-    margin: 0px;
     box-sizing: border-box;
-}
-
-body {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', sans-serif;
+    width: 100vw;
     height: 100vh;
-    display: grid;
-    align-items: flex-end;
-}
-
-.ana {
-    background-color: var(--black);
-    width: 26rem;
-    height: 90%;
-    margin: 0.5rem auto;
-    border-radius: 3rem;
-    padding: 0.5rem 0rem;
-    display: grid;
-    align-content: flex-end;
-    justify-content: center;
-}
-
-.container {
-
-    color: white;
+    display: flex;
     align-items: center;
+    justify-content: center;
+  }
+  
+  .calculator {
+    background: black;
+    border-radius: 50px;
+    color: white;
+    height: 640px;
+    width: 400px;
+    padding: 20px;
+  }
+  
+  .display {
+    height: 200px;
+    width: 100%;
+    text-align: right;
+    padding: 20px;
+font-size: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .previous-display {
+    opacity: 0.5;
+    font-size: 50px;
+    overflow: hidden;
+  }
+  
+  .buttons-container {
     display: grid;
+    grid-gap: 10px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    gap: 1vh;
+  }
+  
+  .button {
+    display: flex;
     justify-content: center;
-    width: 24rem;
-    text-align: center;
-}
-
-.box {
-    border: 1px solid none;
+    align-items: center;
+    background: #333;
     border-radius: 50%;
-    padding: 2.2vh;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2.5rem;
-
-}
-
-.box:hover {
-    opacity: 0.5;
     cursor: pointer;
-}
-
-.gri {
-    background-color: var(--grey-6);
-    color: var(--black);
-}
-
-.sarı {
-    background-color: var(--yellow-2);
-}
-
-.siyah {
-    background-color: var(--grey-1);
-}
-
-.input {
-    display: grid;
-    justify-content: end;
-}
-
-label {
-    height: 3vh;
-    background-color: var(--black);
-    border: none;
-    text-align: right;
-    width: 23rem;
-    color: var(--white);
-    display: block;
-    padding: 0.5rem 1rem 0.5rem;
-}
-
-input {
-    font-size: 3vh;
-    background-color: var(--black);
-    border: none;
-    text-align: right;
-    width: 23rem;
-    color: var(--white);
-    padding: 0.5rem 1rem 0.5rem;
-    word-break: break-all;
-}
-
-input:focus {
-    outline: none !important
-}
-
-.sıfır {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    border-radius: 3.5rem;
-    text-align: left;
-    padding-left: 1.5rem;
-}
+    font-size: 45px;
+    height: 70px;
+    width: 70px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .function {
+    color: black;
+    background: #a5a5a5;
+  }
+  
+  .operator {
+    background: #f1a33c;
+  }
+  
+  .number-0 {
+    border-radius: 50px;
+    grid-column: span 2;
+    justify-content: flex-start;
+    padding-left: 40px;
+    width: 180px;
+  }
+  
+  .button:active {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .button:hover {
+    opacity: 0.5;
+  }
+  
