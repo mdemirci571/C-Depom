@@ -1,0 +1,63 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+.p1 {
+  /* margin-top: 10px; */
+  font-size: 30px;
+  font-weight: bold;
+  
+}
+
+.p2 {
+  font-size: 15px;
+}
+body {
+  color: white;
+  background-image: url(https://www.turkmmo.com/wp-content/uploads/2021/11/netflix-dizileri.jpg);
+  text-align: center;
+  background-size: 100%;
+  padding-top: 10px;
+}
+
+form {
+  background-color: black;
+  padding: 10px;
+  width: fit-content;
+  display: inline-block;
+}
+
+label {
+  display: inline-block;
+  text-align: left;
+  width: 300px;
+  padding: 0px;
+}
+
+input {
+  padding: 5px 56px;
+}
+
+.buton {
+  text-align: center;
+  background-color: red;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+.buton:hover {
+  cursor: pointer;
+  background-color: blanchedalmond;
+}
+
+.series {
+  display: inline-block;
+
+  padding: 5px 80px;
+}
+span{
+  color: red;
+  margin-top: 10px;
+  font-size: 30px;
+}

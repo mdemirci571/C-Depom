@@ -1,0 +1,45 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Inter', sans-serif;
+font-family: 'Roboto', sans-serif;
+text-align: center;
+background-size: 100%;
+background-image: url(https://cdn.pixabay.com/photo/2022/11/19/09/35/forest-7601671_960_720.jpg)
+
+}
+label{
+    display: inline-block;
+    width: 110px;
+    text-align: left;
+}
+form{
+    width: fit-content;
+    background-image: -o-linear-gradient(2);
+    text-align: center;
+    padding: 20px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(55,62,170,0.745014245014245) 100%);
+}
+.buton input{
+    display: inline-block;
+    border-radius: 10px;
+    padding: 2px 10px;
+    margin: 30px;
+}
+.buton input:hover {
+    background-color: rgb(233, 149, 12);
+    
+    cursor: pointer;
+    color: white;
+  }
+
+/* gradient resim, box shadow */
