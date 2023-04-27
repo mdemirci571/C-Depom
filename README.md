@@ -1,2 +1,2 @@
 # clarusway_deposu
-Çalışma ve ders notları
+Çalışma ve ders notlarım- Mine studie- og forelesningsnotater-My study and lecture notes.
