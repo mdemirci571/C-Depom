@@ -21,7 +21,7 @@ class Person:
         self.name = name
         self.age = age
         self.gender = gender
-        print('Personel OLuşturuldu.')
+        print('Personel Oluşturuldu.')
 
     def __str__(self):
         return f'{self.name} - {self.age}'
@@ -30,6 +30,7 @@ class Person:
         return f'{self.name} - {self.age} - {self.gender} - {self.company}'
 
 # person_1 = Person('Qadir', 40) # Bir classın atandığı değişkene instance denir.
+# Bir classtan türetilmiş objeye instance denir.
 # print(person_1)
 # print(person_1.get_detail())
 
@@ -40,6 +41,28 @@ class Employee(Person):
 
     salary = 5000
 
-person_1 = Employee('Busra', 29, 'Female')
+    def set_salary(self, salary):
+        self.salary = salary
+
+    # Override:
+    def __init__(self, name, age, gender, salary):
+        # Super(), inherit ettiğimiz ilk class'ı temsil eder.
+        super().__init__(name, age, gender)
+        self.salary = salary
+
+    # Polymorphism (Override, Overload)
+    # Mevcut bir methodu tekrar tanımlama imkanına "Polymorphism" denir.
+    # Yeni methodun eski methodu ezmesine "override" denir.
+    # Yeni method ile eski methodun aynı anda aktif olmasına da "overload" denir.
+    # Python "overload" desteklemez.
+    def get_detail(self):
+        return f'{self.name} - {self.age} - {self.salary} - {self.gender} - {self.company}'
+
+# person_1 = Employee('Busra', 29, 'Female')
+# person_1.set_salary(3000)
+# print(person_1.get_detail())
+
+person_1 = Employee('Selim', 34, 'Male', 1500)
+print(person_1.get_detail())
 
 
