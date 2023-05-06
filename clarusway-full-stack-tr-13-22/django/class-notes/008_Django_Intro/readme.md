@@ -1,17 +1,11 @@
-python3 to python (run only once)
+python3 to python (run only once) (for MacOS/Linux)
 ```
-echo alias py='python3' >> ~/.bash_profile
-echo alias python='python3' >> ~/.bash_profile
-echo alias pip='pip3' >> ~/.bash_profile
-echo alias py='python3' >> ~/.bash_profile
-echo alias python='python3' >> ~/.bash_profile
-echo alias pip='pip3' >> ~/.bash_profile
-echo alias py='python3' >> ~/.zshrc 
-echo alias python='python3' >> ~/.zshrc 
-echo alias pip='pip3' >> ~/.zshrc 
-echo alias py='python3' >> ~/.zshrc 
-echo alias python='python3' >> ~/.zshrc 
-echo alias pip='pip3' >> ~/.zshrc 
+echo "alias py='python3'" >> ~/.bash_profile
+echo "alias python='python3'" >> ~/.bash_profile
+echo "alias pip='pip3'" >> ~/.bash_profile
+echo "alias py='python3'" >> ~/.zshrc 
+echo "alias python='python3'" >> ~/.zshrc 
+echo "alias pip='pip3'" >> ~/.zshrc 
 ```
 
 ```sh
@@ -20,7 +14,7 @@ echo alias pip='pip3' >> ~/.zshrc
     $ python -m venv env # Environment ortamı kur.
 
     $ source env/bin/activate
-    # for Windows -> $ env/Scripts/activate 
+    # for Windows -> $ env\Scripts\activate 
     # for Windows GitBash -> $ source env/Scripts/activate 
     # Windows PermissionDenied -> $ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
     # for env-close -> $ deactivate
